@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "firebase-teste": {
+    "crud-angular-firebase": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/firebase-teste",
+            "outputPath": "dist/crud-angular-firebase",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -21,12 +21,12 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/logo-triangular.ico",
+              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "firebase-teste:build:production"
+              "browserTarget": "crud-angular-firebase:build:production"
             },
             "development": {
-              "browserTarget": "firebase-teste:build:development"
+              "browserTarget": "crud-angular-firebase:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "firebase-teste:build"
+            "browserTarget": "crud-angular-firebase:build"
           }
         },
         "test": {

@@ -1,26 +1,30 @@
-import { initializeApp } from 'firebase/app';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './componentes/nav/nav.component';
 
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 
-import { firebaseConfig } from '../environment';
+import { environment }  from '../environment';
+import { ListContatoComponent } from './contato/list-contato/list-contato.component';
+import { AddContatoComponent } from './contato/add-contato/add-contato.component';
+import { EditContatoComponent } from './contato/edit-contato/edit-contato.component';
+
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    ListContatoComponent,
+    AddContatoComponent,
+    EditContatoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

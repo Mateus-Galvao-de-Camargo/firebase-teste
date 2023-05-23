@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavComponent } from './nav.component';
+import { EditContatoComponent } from './edit-contato.component';
 
-describe('NavComponent', () => {
-  let component: NavComponent;
-  let fixture: ComponentFixture<NavComponent>;
+describe('EditContatoComponent', () => {
+  let component: EditContatoComponent;
+  let fixture: ComponentFixture<EditContatoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavComponent ]
+      declarations: [ EditContatoComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NavComponent);
+    fixture = TestBed.createComponent(EditContatoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
