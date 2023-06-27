@@ -14,9 +14,9 @@ export class AppComponent {
 
   test() {
     const objeto = {
-      nome: "Fulano",
-      idade: 14,
-      matricula: 1234521541
+      nome: "Denji",
+      raca: "Humano",
+      serieDeOrigem: "Chainsaw-man"
     }
      this.db.object("teste")
      .set(objeto)

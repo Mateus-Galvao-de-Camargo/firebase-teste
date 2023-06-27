@@ -1,6 +1,6 @@
 <div class="pt-3 pb-2 mb-3 border-bottom">
 
-  <h2 class="h2">Adicionar Contato</h2>
+  <h2 class="h2">Adicionar Personagem</h2>
 
 </div>
 
@@ -8,7 +8,7 @@
 
 <!-- FORMULÁRIO -->
 
-<form [formGroup]="contatoForm" (ngSubmit)="submitForm()" novalidate>
+<form [formGroup]="personagemForm" (ngSubmit)="submitForm()" novalidate>
 
   <!-- ADAPTA O TAMANHO DO FORMULÁRIO DE ACORDO COM A TELA-->
 
@@ -44,7 +44,7 @@
 
       <!-- LINHA 1 - CAMPO NOME -->
 
-      <!-- LINHA 2 - CAMPO IDADE -->
+      <!-- LINHA 2 - CAMPO raca -->
 
       <div class="row">
 
@@ -52,53 +52,17 @@
 
           <label
 
-            [ngClass]="{'text-danger': idade?.touched && idade?.invalid}"
+            [ngClass]="{'text-danger': raca?.touched && raca?.invalid}"
 
-            for="idade" class="form-label">Idade</label>
-
-          <input
-
-            [ngClass]="{'is-invalid': idade?.touched && idade?.invalid, 'is-valid': idade?.touched && idade?.valid}"
-
-            type="number"
-
-            formControlName="idade"
-
-            class="form-control"
-
-            required
-
-          />
-
-          <!-- Validation FeedBack -->
-
-          <div class="invalid-feedback"><sup>*</sup>Idade obrigatório</div>
-
-        </div>
-
-      </div>
-
-      <!-- LINHA 2 - CAMPO IDADE -->
-
-      <!-- LINHA 3 - CAMPO TELEFONE -->
-
-      <div class="row">
-
-        <div class="col-md-12 mb-3">
-
-          <label
-
-            [ngClass]="{'text-danger': telefone?.touched && telefone?.invalid}"
-
-            for="telefone" class="form-label">Telefone:</label>
+            for="raca" class="form-label">Raça</label>
 
           <input
 
-            [ngClass]="{'is-invalid': telefone?.touched && telefone?.invalid, 'is-valid': telefone?.touched && telefone?.valid}"
+            [ngClass]="{'is-invalid': raca?.touched && raca?.invalid, 'is-valid': raca?.touched && raca?.valid}"
 
             type="text"
 
-            formControlName="telefone"
+            formControlName="raca"
 
             class="form-control"
 
@@ -108,13 +72,49 @@
 
           <!-- Validation FeedBack -->
 
-          <div class="invalid-feedback"><sup>*</sup>Informe apenas números</div>
+          <div class="invalid-feedback"><sup>*</sup>Raça obrigatória</div>
 
         </div>
 
       </div>
 
-      <!-- LINHA 3 - CAMPO TELEFONE -->
+      <!-- LINHA 2 - CAMPO raca -->
+
+      <!-- LINHA 3 - CAMPO serieDeOrigem -->
+
+      <div class="row">
+
+        <div class="col-md-12 mb-3">
+
+          <label
+
+            [ngClass]="{'text-danger': serieDeOrigem?.touched && serieDeOrigem?.invalid}"
+
+            for="serieDeOrigem" class="form-label">Série De Origem:</label>
+
+          <input
+
+            [ngClass]="{'is-invalid': serieDeOrigem?.touched && serieDeOrigem?.invalid, 'is-valid': serieDeOrigem?.touched && serieDeOrigem?.valid}"
+
+            type="text"
+
+            formControlName="serieDeOrigem"
+
+            class="form-control"
+
+            required
+
+          />
+
+          <!-- Validation FeedBack -->
+
+          <div class="invalid-feedback"><sup>*</sup>Série de origem obrigatória</div>
+
+        </div>
+
+      </div>
+
+      <!-- LINHA 3 - CAMPO serieDeOrigem -->
 
       <!-- BOTÕES DO FORMULÁRIO -->
 
@@ -126,9 +126,9 @@
 
         </button>
 
-        <button type="submit" class="btn btn-success mx-2" [disabled]="!contatoForm.valid">
+        <button type="submit" class="btn btn-success mx-2" [disabled]="!personagemForm.valid">
 
-          Adicionar Contato
+          Adicionar Personagem
 
         </button>
 

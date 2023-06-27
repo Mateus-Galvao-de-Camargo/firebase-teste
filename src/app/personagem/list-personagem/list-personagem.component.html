@@ -4,9 +4,9 @@
 
             pt-3 pb-2 mb-3 border-bottom">
 
-  <h2 class="h2">Lista de Contatos</h2>
+  <h2 class="h2">Lista de Personagems</h2>
 
-  <a routerLink="/add-contato" class="btn btn-success" *ngIf="!listaVazia"> Adicionar Contato</a>
+  <a routerLink="/add-personagem" class="btn btn-success" *ngIf="!listaVazia"> Adicionar Personagem</a>
 
 </div>
 
@@ -26,9 +26,9 @@
 
   <div class="text-center" *ngIf="listaVazia">
 
-    <p>Nenhum contato adicionado ainda</p>
+    <p>Nenhum personagem adicionado ainda</p>
 
-    <a routerLink="/add-contato" class="btn btn-success"> Adicionar Contato</a>
+    <a routerLink="/add-personagem" class="btn btn-success"> Adicionar Personagem</a>
 
   </div>
 
@@ -46,9 +46,9 @@
 
           <th scope="col">Nome</th>
 
-          <th scope="col">Idade</th>
+          <th scope="col">Raça</th>
 
-          <th scope="col">Telefone</th>
+          <th scope="col">Série De Origem</th>
 
           <th class="text-center" scope="col">Editar</th>
 
@@ -58,27 +58,27 @@
 
       <tbody>
 
-        <tr *ngFor="let contato of listaContatos | paginate: { itemsPerPage: 8, currentPage: page};
+        <tr *ngFor="let personagem of listaPersonagems | paginate: { itemsPerPage: 8, currentPage: page};
 
                     let i = index">
 
           <th scope="row">{{i+1}}</th>
 
-          <td>{{contato.nome}}</td>
+          <td>{{personagem.nome}}</td>
 
-          <td>{{contato.idade}}</td>
+          <td>{{personagem.raca}}</td>
 
-          <td>{{contato.telefone}}</td>
+          <td>{{personagem.serieDeOrigem}}</td>
 
           <td class="text-center action-block">
 
             <span class="btn btn-outline-primary btn-sm"
 
-              routerLink="/edit-contato/{{contato.$key}}">Editar</span>
+              routerLink="/edit-personagem/{{personagem.$key}}">Editar</span>
 
               <span class="mx-2 btn btn-outline-danger btn-sm"
 
-               (click)="deleteContato(contato)">Remover</span>
+               (click)="deletePersonagem(personagem)">Remover</span>
 
           </td>
 
@@ -95,3 +95,4 @@
   </div>
 
 </div>
+

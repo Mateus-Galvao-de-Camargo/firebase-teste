@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
 
-import { AddContatoComponent } from './contato/add-contato/add-contato.component';
-import { ListContatoComponent } from './contato/list-contato/list-contato.component';
-import { EditContatoComponent } from './contato/edit-contato/edit-contato.component';
+import { AddPersonagemComponent } from './personagem/add-personagem/add-personagem.component';
+import { ListPersonagemComponent } from './personagem/list-personagem/list-personagem.component';
+import { EditPersonagemComponent } from './personagem/edit-personagem/edit-personagem.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/list-contato', pathMatch: 'full' },
-  { path: 'add-contato', component: AddContatoComponent },
-  { path: 'list-contato', component: ListContatoComponent },
-  { path: 'edit-contato/:id', component: EditContatoComponent }
+  { path: '', redirectTo: '/list-personagem', pathMatch: 'full' },
+  { path: 'add-personagem', component: AddPersonagemComponent },
+  { path: 'list-personagem', component: ListPersonagemComponent },
+  { path: 'edit-personagem/:id', component: EditPersonagemComponent }
 ];
 
 @NgModule({

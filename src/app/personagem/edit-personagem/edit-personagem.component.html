@@ -1,12 +1,12 @@
 <div class="pt-3 pb-2 mb-3 border-bottom">
 
-  <h2 class="h2">Editar Contato</h2>
+  <h2 class="h2">Editar Personagem</h2>
 
 </div>
 
 
 
-<form [formGroup]="contatoForm" (ngSubmit)="submitForm()" novalidate>
+<form [formGroup]="personagemForm" (ngSubmit)="submitForm()" novalidate>
 
   <div class="row">
 
@@ -36,13 +36,13 @@
 
         <div class="col-md-12 mb-3">
 
-          <label>Idade</label>
+          <label>Raça</label>
 
           <input
 
-            type="number"
+            type="text"
 
-            formControlName="idade"
+            formControlName="raca"
 
             class="form-control"
 
@@ -52,9 +52,9 @@
 
           <!-- errors-->
 
-          <p *ngIf="idade?.touched && idade?.invalid" class="error">
+          <p *ngIf="raca?.touched && raca?.invalid" class="error">
 
-            <sup>*</sup>Informe a idade
+            <sup>*</sup>Informe a raça
 
           </p>
 
@@ -66,13 +66,13 @@
 
         <div class="col-md-12 mb-3">
 
-          <label>Telefone:</label>
+          <label>Série De Origem:</label>
 
           <input
 
             type="text"
 
-            formControlName="telefone"
+            formControlName="serieDeOrigem"
 
             class="form-control"
 
@@ -82,15 +82,9 @@
 
           <!-- errors-->
 
-          <p *ngIf="telefone?.touched && telefone?.invalid" class="error">
+          <p *ngIf="serieDeOrigem?.touched && serieDeOrigem?.invalid" class="error">
 
-            <sup>*</sup>Informe telefone
-
-          </p>
-
-          <p *ngIf="telefone?.errors?.['pattern']" class="error">
-
-            <sup>*</sup>Use apenas números
+            <sup>*</sup>Informe a série de origem
 
           </p>
 
@@ -100,9 +94,9 @@
 
       <div class="form-group text-end">
 
-        <button type="submit" class="btn btn-info mx-2" [disabled]="!contatoForm.valid">
+        <button type="submit" class="btn btn-info mx-2" [disabled]="!personagemForm.valid">
 
-          Editar Contato
+          Editar Personagem
 
         </button>
 
@@ -113,3 +107,4 @@
   </div>
 
 </form>
+

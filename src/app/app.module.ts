@@ -7,9 +7,6 @@ import {AngularFireModule} from "@angular/fire/compat";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 
 import { environment }  from '../environment';
-import { ListContatoComponent } from './contato/list-contato/list-contato.component';
-import { AddContatoComponent } from './contato/add-contato/add-contato.component';
-import { EditContatoComponent } from './contato/edit-contato/edit-contato.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -20,12 +17,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 
+import { ListPersonagemComponent } from './personagem/list-personagem/list-personagem.component';
+import { EditPersonagemComponent } from './personagem/edit-personagem/edit-personagem.component';
+import { AddPersonagemComponent } from './personagem/add-personagem/add-personagem.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ListContatoComponent,
-    AddContatoComponent,
-    EditContatoComponent
+    ListPersonagemComponent,
+    EditPersonagemComponent,
+    AddPersonagemComponent
   ],
   imports: [
     BrowserModule,
