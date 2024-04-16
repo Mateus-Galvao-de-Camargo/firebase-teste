@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyApmg52v2GMZ3n52zSkmj2s_iPusLjVXVc",
+    apiKey: "Insira aqui a ApiKey para acessar o banco",
     authDomain: "crud-angular-firebase-1227b.firebaseapp.com",
     databaseURL: "https://crud-angular-firebase-1227b-default-rtdb.firebaseio.com",
     projectId: "crud-angular-firebase-1227b",
